@@ -6,5 +6,7 @@
  * 
  */
 public class Banking extends Card{
-	
+	public Banking(int bet) {
+		
+	}
 }
