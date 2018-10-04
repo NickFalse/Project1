@@ -6,7 +6,8 @@
  *
  */
 public class Fps extends Video{
+	private int numOfAngry14YearOlds;
 	public Fps(int numOfAngry14YearOlds) {
-		
+		this.numOfAngry14YearOlds = numOfAngry14YearOlds;
 	}
 }

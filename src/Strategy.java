@@ -6,7 +6,8 @@
  *
  */
 public class Strategy extends Board{
+	private int numOfPiecesRemaining;
 	public Strategy(int numOfPiecesRemaining) {
-		
+		this.numOfPiecesRemaining = numOfPiecesRemaining;
 	}
 }

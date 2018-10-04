@@ -6,7 +6,8 @@
  * 
  */
 public class Patience extends Card{
+	private int remainingCards;
 	public Patience(int remainingCards) {
-		
+		this.remainingCards = remainingCards;
 	}
 }

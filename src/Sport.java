@@ -6,7 +6,8 @@
  *
  */
 public class Sport extends Video{
+	private String currentTeam;
 	public Sport(String currentTeam) {
-		
+		this.currentTeam = currentTeam;
 	}
 }

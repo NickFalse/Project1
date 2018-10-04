@@ -6,7 +6,8 @@
  *
  */
 public class Tile extends Board{
+	private int numOfTiles;
 	public Tile(int numOfTiles) {
-		
+		this.numOfTiles=numOfTiles;
 	}
 }

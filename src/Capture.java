@@ -6,7 +6,8 @@
  * 
  */
 public class Capture extends Board{
+	private String currentBoardState;
 	public Capture(String currentBoardState) {
-		
+		this.currentBoardState = currentBoardState;
 	}
 }
