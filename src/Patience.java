@@ -6,5 +6,7 @@
  * 
  */
 public class Patience extends Card{
-
+	public Patience(int remainingCards) {
+		
+	}
 }

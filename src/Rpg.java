@@ -6,5 +6,7 @@
  *
  */
 public class Rpg extends Video{
-
+	public Rpg(int numOfStrangeCharacters) {
+		
+	}
 }

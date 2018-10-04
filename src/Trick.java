@@ -6,5 +6,7 @@
  * 
  */
 public class Trick extends Card{
-
+	public Trick(int numOfTricks) {
+		
+	}
 }

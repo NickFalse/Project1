@@ -6,5 +6,7 @@
  *
  */
 public class Strategy extends Board{
-
+	public Strategy(int numOfPiecesRemaining) {
+		
+	}
 }

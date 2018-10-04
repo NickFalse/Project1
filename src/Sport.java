@@ -6,5 +6,7 @@
  *
  */
 public class Sport extends Video{
-
+	public Sport(String currentTeam) {
+		
+	}
 }
