@@ -23,7 +23,17 @@ public class Driver {
 		// TODO Auto-generated method stub
 		
 		//File file = new File();
-		ArrayList arraylist = new ArrayList();
+		ArrayList bankingList = new ArrayList();
+		ArrayList trickList = new ArrayList();
+		ArrayList patienceList = new ArrayList();
+		ArrayList tileList = new ArrayList();
+		ArrayList captureList = new ArrayList();
+		ArrayList strategyList = new ArrayList();
+		ArrayList fpsList = new ArrayList();
+		ArrayList rpgList = new ArrayList();
+		ArrayList sportList = new ArrayList();
+
+
 		
 		
 	}
