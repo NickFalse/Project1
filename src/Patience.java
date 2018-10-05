@@ -21,6 +21,7 @@ public class Patience extends Card{
 		this.remainingCards = remainingCards;
 	}
 
+
 	public void throwCard() {
 		remainingCards--;
 	}
@@ -35,4 +36,15 @@ public class Patience extends Card{
 				+ ", estimatedTime=" + estimatedTime + ", win=" + win + "]";
 	}
 	
+
+	
+	//You say Oof when your cards fall over
+	public String cardsFallOver() {
+		return "Oof";
+	}
+	
+	//when you loss patience its game over
+	public String patienceLost() {
+		return "game over";
+	}
 }

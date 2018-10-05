@@ -20,12 +20,6 @@ public class Banking extends Card{
 		super(title, genre,numOfPlayers,  ageRecommend, estimatedTime, numOfCards);
 		this.bet = bet;
 	}
-	public String deal() {
-		return "the dealer places a card on the table";
-	}
-	public String goBroke() {
-		return "you dip into your child's college fund for one last bet knowing it isn't your last...";//go dark
-	}
 	@Override
 	public String toString() {
 		return "Banking [bet=" + bet + ", numOfCards=" + numOfCards + ", numOfPlayers=" + numOfPlayers + ", title="
@@ -33,4 +27,17 @@ public class Banking extends Card{
 				+ ", win=" + win + "]";
 	}
 	
-}
+
+
+	//when you count cards at a casino you get kicked out 
+	public String countingCards() {
+		return "you've been kicked out";
+	}
+	
+	//when you have error counting people will tell you to go back to school
+	public String errorCounting() {
+		return "you need to go back to elementary school";
+	}
+	
+} 
+

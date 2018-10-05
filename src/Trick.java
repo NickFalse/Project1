@@ -21,6 +21,7 @@ public class Trick extends Card{
 		this.numOfTricks = numOfTricks;
 	}
 
+
 	public String peek() {
 		return "the person next to you catches you looking at their cards";
 	}
@@ -35,4 +36,5 @@ public class Trick extends Card{
 				+ estimatedTime + ", win=" + win + "]";
 	}
 	
+
 }

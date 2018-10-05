@@ -126,12 +126,9 @@ public class Driver {
 			while (scan.hasNextLine()) {
 				String line =scan.nextLine();
 				String[] arr = line.split(", ");
-				//System.out.println(Arrays.toString(arr));
+				System.out.println(Arrays.toString(arr));
 				dvr.addItem(arr);
 				
-			}
-			for(Banking x:dvr.getBankingList()) {
-				System.out.println(x.toString());
 			}
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
