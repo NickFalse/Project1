@@ -9,7 +9,7 @@ public class Video extends Board{
 
 	//variables
 	
-	String Console;
+	String console;
 	int installationSize;
 	
 	//getters and setters
@@ -18,13 +18,13 @@ public class Video extends Board{
 	 * @return the console
 	 */
 	public String getConsole() {
-		return Console;
+		return console;
 	}
 	/**
 	 * @param console the console to set
 	 */
 	public void setConsole(String console) {
-		Console = console;
+		this.console = console;
 	}
 	/**
 	 * @return the installationSize

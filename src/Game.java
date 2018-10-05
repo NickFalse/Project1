@@ -11,8 +11,7 @@ public abstract class Game extends Board{
 	
 	int numOfPlayers, ageRecommend, estimatedTime;
 	String title, genre;
-	boolean Win;
-	
+	boolean win;
 	
 	//getters and setters
 	
@@ -89,7 +88,7 @@ public abstract class Game extends Board{
 	 * @return the Win
 	 */
 	public boolean isWin() {
-		return Win;
+		return win;
 	}	
 	
 }
