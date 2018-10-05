@@ -27,14 +27,18 @@ public class Banking extends Card{
 				+ ", win=" + win + "]";
 	}
 	
-
-
-	//when you count cards at a casino you get kicked out 
+	/**
+	 * When you cound cards at a casino you get kicked out
+	 * @return
+	 */
 	public String countingCards() {
 		return "you've been kicked out";
 	}
 	
-	//when you have error counting people will tell you to go back to school
+	/**
+	 * When you have error counting people will tell you to go back to school
+	 * @return
+	 */
 	public String errorCounting() {
 		return "you need to go back to elementary school";
 	}

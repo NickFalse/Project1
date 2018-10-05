@@ -23,12 +23,18 @@ public class Sport extends Video{
 		this.currentTeam = currentTeam;
 	}
 
-	//if fakeInjury return acting like you have a fake injury
+	/**
+	 * if you have a fake injury you will say "o the pain, how will I live on"
+	 * @return
+	 */
 	public String fakeInjury() {
-		return "o that pain, how will I live on";
+		return "o the pain, how will I live on";
 		}
 	
-	//if tapped on shoulder return acting like life suffering damage
+	/**
+	 * If tapped on shoulder, act like you've suffered life devastating damage
+	 * @return
+	 */
 	public String getsTappedOnShoulder() {
 		return "suffer life devastating damage";
 	}

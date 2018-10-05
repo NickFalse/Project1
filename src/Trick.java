@@ -21,10 +21,17 @@ public class Trick extends Card{
 		this.numOfTricks = numOfTricks;
 	}
 
-
+	/**If you peek the person next to you
+	 * catches you looking at their cards
+	 * 
+	 * @return
+	 */
 	public String peek() {
 		return "the person next to you catches you looking at their cards";
 	}
+	/**
+	 * by adding a trick you increase the number of tricks by one 
+	 */
 	public void addTrick() {
 		numOfTricks++;
 	}

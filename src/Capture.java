@@ -24,13 +24,19 @@ public class Capture extends Board{
 		this.currentBoardState = currentBoardState;
 	}
 
-	
-	//it's game over when you flip the board
+	/**
+	 * It's game over when you flip the game board upside down
+	 * @return
+	 */
 	public String gameOver() {
 		return "flip the board upside down";
 	}
 	
-	
+	/**
+	 * When you capture a piece you look your oppenent in the eyes 
+	 * as you take their piece
+	 * @return
+	 */
 	public String capturePiece() {
 		return "You look your opponent in the eyes as you take their piece";
 	}

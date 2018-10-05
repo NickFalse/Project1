@@ -23,13 +23,18 @@ public class Strategy extends Board{
 		this.numOfPiecesRemaining = numOfPiecesRemaining;
 	}
 
-	
-	//when you gamble your pieces you loss everything
+	/**
+	 * When you gamble your pieces you loss everything
+	 * @return
+	 */
 	public String gambleYourPieces() {
 		return "you've lost everything";
 	}
 	
-	//after charging forward you loss half of your soldiers
+	/**
+	 * When you charge forward you lose half of your soldiers
+	 * @return
+	 */
 	public String chargeForward() {
 		return "you've just lost half of your soldiers";
 	}

@@ -22,14 +22,19 @@ public class RPG extends Video{
 		super(numOfPlayers, title, genre, ageRecommend, estimatedTime, console, installationSize);
 		this.numOfStrangeCharacters = numOfStrangeCharacters;
 	}
-
 	
-	//after i get stabStab'd i say ouch ouch
+	/**
+	 * If you get stabbed say "ouch ouch"
+	 * @return
+	 */
 	public String stabStab() {
 		return "ouch ouch";
 	}
 	
-	//after you hit something you get hit back
+	/**
+	 * When you hit something you hit them and then get hit back
+	 * @return
+	 */
 	public String hit() {
 		return "hit an opponent and let your hit opponent hit you";
 	}

@@ -23,12 +23,18 @@ public class Tile extends Board{
 		this.numOfTiles=numOfTiles;
 	}
 	
-	//the noice you hear when knocking over a tile
+	/**
+	 * When you knock over a tile you hear "bup bop cling clang bam"
+	 * @return
+	 */
 	public String knockOver() {
 		return "bup bop cling clang bam";
 	}
 	
-	//the noice it makes when you connect tiles
+	/**
+	 * When you connect the pieces you hear "ka chunk"
+	 * @return
+	 */
 	public String connectPieces() {
 		return "ka chunk";
 	}

@@ -21,10 +21,16 @@ public class Patience extends Card{
 		this.remainingCards = remainingCards;
 	}
 
-
+	/**
+	 * When you throw a card a card is removed from remaining cards
+	 */
 	public void throwCard() {
 		remainingCards--;
 	}
+	/**
+	 * When you shuffle a deck you learn you don't know how to shuffle
+	 * @return
+	 */
 	public String shuffleDeck() {
 		return "you put all the cards on the table and mix them in shame knowing you cant shuffle";
 	}
