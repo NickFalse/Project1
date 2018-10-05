@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.*;
 import java.io.*;
 /**
  * 
@@ -32,7 +32,20 @@ public class Driver {
 		ArrayList fpsList = new ArrayList();
 		ArrayList rpgList = new ArrayList();
 		ArrayList sportList = new ArrayList();
-
+		// pass the path to the file as a parameter 
+		try { 
+			Scanner scan = new Scanner(new File("test.txt"));
+			while (scan.hasNextLine()) {
+				String shitshow =scan.nextLine();
+				String[] hek = shitshow.split(",");
+			      System.out.println(Arrays.toString(hek)); 
+			}
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+	  
+	    
 
 		
 		
