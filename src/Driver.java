@@ -34,6 +34,7 @@ public class Driver {
 		
 		//File file = new File();
 <<<<<<< HEAD
+<<<<<<< HEAD
 		ArrayList bankingList = new ArrayList();
 		ArrayList trickList = new ArrayList();
 		ArrayList patienceList = new ArrayList();
@@ -45,6 +46,8 @@ public class Driver {
 		ArrayList sportList = new ArrayList();
 
 =======
+=======
+>>>>>>> a3b7982b36705e74f2b8ff636e25440f1b636b1e
 		
 		// pass the path to the file as a parameter 
 		try { 
