@@ -10,4 +10,14 @@ public class Patience extends Card{
 	public Patience(int remainingCards) {
 		this.remainingCards = remainingCards;
 	}
+	
+	//You say Oof when your cards fall over
+	public String cardsFallOver() {
+		return "Oof";
+	}
+	
+	//when you loss patience its game over
+	public String patienceLost() {
+		return "game over";
+	}
 }
