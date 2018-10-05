@@ -5,9 +5,9 @@
  * @version 9/27/2018
  *
  */
-public class Fps extends Video{
+public class FPS extends Video{
 	private int numOfAngry14YearOlds;
-	public Fps(int numOfAngry14YearOlds) {
+	public FPS(int numOfAngry14YearOlds) {
 		this.numOfAngry14YearOlds = numOfAngry14YearOlds;
 	}
 	
