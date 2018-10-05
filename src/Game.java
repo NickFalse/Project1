@@ -5,14 +5,23 @@
  * @version 10/1/2018
  * 
  */
-public abstract class Game extends Board{
+public abstract class Game{
+	
 
 	//variables 
 	
-	int numOfPlayers, ageRecommend, estimatedTime;
-	String title, genre;
+	int numOfPlayers;
+	String title, genre, ageRecommend, estimatedTime;
 	boolean win;
 	
+	public Game(int numOfPlayers, String title, String genre, String ageRecommend, String estimatedTime) {
+		this.numOfPlayers = numOfPlayers;
+		this.title = title;
+		this.genre = genre;
+		this.ageRecommend = ageRecommend;
+		this.estimatedTime = estimatedTime;
+	}
+
 	//getters and setters
 	
 	/**
@@ -30,25 +39,25 @@ public abstract class Game extends Board{
 	/**
 	 * @return the ageRecommend
 	 */
-	public int getAgeRecommend() {
+	public String getAgeRecommend() {
 		return ageRecommend;
 	}
 	/**
 	 * @param ageRecommend the ageRecommend to set
 	 */
-	public void setAgeRecommend(int ageRecommend) {
+	public void setAgeRecommend(String ageRecommend) {
 		this.ageRecommend = ageRecommend;
 	}
 	/**
 	 * @return the estimatedTime
 	 */
-	public int getEstimatedTime() {
+	public String getEstimatedTime() {
 		return estimatedTime;
 	}
 	/**
 	 * @param estimatedTime the estimatedTime to set
 	 */
-	public void setEstimatedTime(int estimatedTime) {
+	public void setEstimatedTime(String estimatedTime) {
 		this.estimatedTime = estimatedTime;
 	}
 	/**

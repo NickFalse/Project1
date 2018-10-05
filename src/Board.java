@@ -5,40 +5,41 @@
  * @version 9/27/2018
  *
  */
-public class Board {
+public class Board extends Game{
 	
 	//variables
 	
-	int boardHeight, boardWidth , numberOfPieces;
-
+	String boardSize;
+	int numberOfPieces;
+	
 	//getters and setters
 	
 	/**
+	 * @param numOfPlayers
+	 * @param title
+	 * @param genre
+	 * @param ageRecommend
+	 * @param estimatedTime
+	 */
+	public Board(int numOfPlayers, String title, String genre, String ageRecommend, String estimatedTime,String boardSize, int numberOfPieces) {
+		super(numOfPlayers, title, genre, ageRecommend, estimatedTime);
+		this.boardSize = boardSize;
+		this.numberOfPieces = numberOfPieces;
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
 	 * @return the boardHeight
 	 */
-	public int getBoardHeight() {
-		return boardHeight;
+	public String getBoardSize() {
+		return boardSize;
 	}
 
 	/**
 	 * @param boardHeight the boardHeight to set
 	 */
-	public void setBoardHeight(int boardHeight) {
-		this.boardHeight = boardHeight;
-	}
-
-	/**
-	 * @return the boardWidth
-	 */
-	public int getBoardWidth() {
-		return boardWidth;
-	}
-
-	/**
-	 * @param boardWidth the boardWidth to set
-	 */
-	public void setBoardWidth(int boardWidth) {
-		this.boardWidth = boardWidth;
+	public void setBoardSize(String boardSize) {
+		this.boardSize = boardSize;
 	}
 
 	/**
@@ -53,6 +54,13 @@ public class Board {
 	 */
 	public void setNumberOfPieces(int numberOfPieces) {
 		this.numberOfPieces = numberOfPieces;
+	}
+
+	@Override
+	public String toString() {
+		return "Board [boardSize=" + boardSize + ", numberOfPieces=" + numberOfPieces + ", numOfPlayers=" + numOfPlayers
+				+ ", title=" + title + ", genre=" + genre + ", ageRecommend=" + ageRecommend + ", estimatedTime="
+				+ estimatedTime + ", win=" + win + "]";
 	}
 	
 }

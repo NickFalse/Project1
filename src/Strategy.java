@@ -7,9 +7,22 @@
  */
 public class Strategy extends Board{
 	private int numOfPiecesRemaining;
-	public Strategy(int numOfPiecesRemaining) {
+	
+	/**
+	 * @param numOfPlayers
+	 * @param title
+	 * @param genre
+	 * @param ageRecommend
+	 * @param estimatedTime
+	 * @param boardHeight
+	 * @param boardWidth
+	 * @param numberOfPieces
+	 */
+	public Strategy(String title, String genre,int numOfPlayers, int numOfPiecesRemaining, String ageRecommend, String estimatedTime, String boardSize, int numberOfPieces) {
+		super(numOfPlayers, title, genre, ageRecommend, estimatedTime, boardSize, numberOfPieces);
 		this.numOfPiecesRemaining = numOfPiecesRemaining;
 	}
+
 	
 	//when you gamble your pieces you loss everything
 	public String gambleYourPieces() {
@@ -20,4 +33,14 @@ public class Strategy extends Board{
 	public String chargeForward() {
 		return "you've just lost half of your soldiers";
 	}
+
+
+	@Override
+	public String toString() {
+		return "Strategy [numOfPiecesRemaining=" + numOfPiecesRemaining + ", boardSize=" + boardSize
+				+ ", numberOfPieces=" + numberOfPieces + ", numOfPlayers=" + numOfPlayers + ", title=" + title
+				+ ", genre=" + genre + ", ageRecommend=" + ageRecommend + ", estimatedTime=" + estimatedTime + ", win="
+				+ win + "]";
+	}
+	
 }

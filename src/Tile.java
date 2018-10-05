@@ -7,7 +7,19 @@
  */
 public class Tile extends Board{
 	private int numOfTiles;
-	public Tile(int numOfTiles) {
+	
+	/**
+	 * @param numOfPlayers
+	 * @param title
+	 * @param genre
+	 * @param ageRecommend
+	 * @param estimatedTime
+	 * @param boardHeight
+	 * @param boardWidth
+	 * @param numberOfPieces
+	 */
+	public Tile(String title, String genre,int numOfPlayers, int numOfTiles, String ageRecommend, String estimatedTime, String boardSize, int numberOfPieces) {
+		super(numOfPlayers, title, genre, ageRecommend, estimatedTime, boardSize, numberOfPieces);
 		this.numOfTiles=numOfTiles;
 	}
 	
@@ -20,4 +32,12 @@ public class Tile extends Board{
 	public String connectPieces() {
 		return "ka chunk";
 	}
+
+	@Override
+	public String toString() {
+		return "Tile [numOfTiles=" + numOfTiles + ", boardSize=" + boardSize + ", numberOfPieces=" + numberOfPieces
+				+ ", numOfPlayers=" + numOfPlayers + ", title=" + title + ", genre=" + genre + ", ageRecommend="
+				+ ageRecommend + ", estimatedTime=" + estimatedTime + ", win=" + win + "]";
+	}
+	
 }

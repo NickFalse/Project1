@@ -1,4 +1,7 @@
-import java.util.ArrayList;
+import java.util.*;
+import java.lang.*;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
 import java.io.*;
 /**
  * 
@@ -8,15 +11,16 @@ import java.io.*;
  * 
  */
 public class Driver {
-	ArrayList bankingList = new ArrayList();
-	ArrayList trickList = new ArrayList();
-	ArrayList patienceList = new ArrayList();
-	ArrayList tileList = new ArrayList();
-	ArrayList captureList = new ArrayList();
-	ArrayList strategyList = new ArrayList();
-	ArrayList fpsList = new ArrayList();
-	ArrayList rpgList = new ArrayList();
-	ArrayList sportList = new ArrayList();
+	List<Banking> bankingList = new ArrayList<Banking>();
+	List<Trick> trickList = new ArrayList();
+	List<Patience> patienceList = new ArrayList();
+	List<Tile> tileList = new ArrayList();
+	List<Capture> captureList = new ArrayList();
+	List<Strategy> strategyList = new ArrayList();
+	List<FPS> fpsList = new ArrayList();
+	List<RPG> rpgList = new ArrayList();
+	List<Sport> sportList = new ArrayList();
+	
 	/**
 	 * 
 	 */
@@ -24,39 +28,110 @@ public class Driver {
 	public Driver() {
 		// TODO Auto-generated constructor stub
 	}
-
+	public void addItem(String[] arr){
+		String cl = arr[1];
+		
+		if(cl.equals("Banking")) {
+			Banking obj = new Banking(arr[0],arr[1],Integer.parseInt(arr[2]),Integer.parseInt(arr[3])
+					,arr[4],arr[5],Integer.parseInt(arr[6]));
+			System.out.println("hi");
+			bankingList.add(obj);
+			//System.out.print(bankingList.toString());
+			
+		}
+		if(cl.equals("Trick")) {
+			Trick obj = new Trick(arr[0],arr[1],Integer.parseInt(arr[2]),Integer.parseInt(arr[3])
+					,arr[4],arr[5],Integer.parseInt(arr[6]));
+			trickList.add(obj);
+		}
+		if(cl.equals("Patience")) {
+			Patience obj = new Patience(arr[0],arr[1],Integer.parseInt(arr[2]),Integer.parseInt(arr[3])
+					,arr[4],arr[5],Integer.parseInt(arr[6]));
+			patienceList.add(obj);
+		}
+		if(cl.equals("Tile")) {
+			Tile obj = new Tile(arr[0],arr[1],Integer.parseInt(arr[2]),Integer.parseInt(arr[3])
+					,arr[4],arr[5],arr[6],Integer.parseInt(arr[7]));
+			tileList.add(obj);
+		}
+		if(cl.equals("Capture")) {
+			Capture obj = new Capture(arr[0],arr[1],Integer.parseInt(arr[2]),arr[3]
+					,arr[4],arr[5],arr[6],Integer.parseInt(arr[7]));
+			captureList.add(obj);
+		}
+		if(cl.equals("Strategy")) {
+			Strategy obj = new Strategy(arr[0],arr[1],Integer.parseInt(arr[2]),Integer.parseInt(arr[3])
+					,arr[4],arr[5],arr[6],Integer.parseInt(arr[7]));
+			strategyList.add(obj);
+		}
+		if(cl.equals("FPS")) {
+			FPS obj = new FPS(arr[0],arr[1],Integer.parseInt(arr[2]),Integer.parseInt(arr[3])
+					,arr[4],arr[5],arr[6],arr[7]);
+			fpsList.add(obj);
+		}
+		if(cl.equals("RPG")) {
+			RPG obj = new RPG(arr[0],arr[1],Integer.parseInt(arr[2]),Integer.parseInt(arr[3])
+					,arr[4],arr[5],arr[6],arr[7]);
+			rpgList.add(obj);
+		}
+		if(cl.equals("Sport")) {
+			Sport obj = new Sport(arr[0],arr[1],Integer.parseInt(arr[2]),arr[3]
+					,arr[4],arr[5],arr[6],arr[7]);
+			sportList.add(obj);
+		}
+	}
+	
+	public List<Banking> getBankingList() {
+		return bankingList;
+	}
+	public List<Trick> getTrickList() {
+		return trickList;
+	}
+	public List<Patience> getPatienceList() {
+		return patienceList;
+	}
+	public List<Tile> getTileList() {
+		return tileList;
+	}
+	public List<Capture> getCaptureList() {
+		return captureList;
+	}
+	public List<Strategy> getStrategyList() {
+		return strategyList;
+	}
+	public List<FPS> getFpsList() {
+		return fpsList;
+	}
+	public List<RPG> getRpgList() {
+		return rpgList;
+	}
+	public List<Sport> getSportList() {
+		return sportList;
+	}
 	/**
 	 * @param args
 	 * @throws ClassNotFoundException 
+	 * @throws SecurityException 
+	 * @throws NoSuchMethodException 
+	 * @throws IllegalAccessException 
+	 * @throws InstantiationException 
+	 * @throws InvocationTargetException 
+	 * @throws IllegalArgumentException 
 	 */
-	public static void main(String[] args) throws ClassNotFoundException {
-		// TODO Auto-generated method stub
-		
-		//File file = new File();
-<<<<<<< HEAD
-<<<<<<< HEAD
-		ArrayList bankingList = new ArrayList();
-		ArrayList trickList = new ArrayList();
-		ArrayList patienceList = new ArrayList();
-		ArrayList tileList = new ArrayList();
-		ArrayList captureList = new ArrayList();
-		ArrayList strategyList = new ArrayList();
-		ArrayList fpsList = new ArrayList();
-		ArrayList rpgList = new ArrayList();
-		ArrayList sportList = new ArrayList();
-
-=======
-=======
->>>>>>> a3b7982b36705e74f2b8ff636e25440f1b636b1e
-		
-		// pass the path to the file as a parameter 
+	public static void main(String[] args) {
+		//<title,genre,num of p, game specific, age, time, parrent 1, parrent 2>
+		Driver dvr = new Driver();
 		try { 
 			Scanner scan = new Scanner(new File("test.txt"));
 			while (scan.hasNextLine()) {
-				String shitshow =scan.nextLine();
-				String[] hek = shitshow.split(", ");
-			      System.out.println(Arrays.toString(hek)); 
-			      System.out.println(Class.forName(hek[1]));
+				String line =scan.nextLine();
+				String[] arr = line.split(", ");
+				//System.out.println(Arrays.toString(arr));
+				dvr.addItem(arr);
+				
+			}
+			for(Banking x:dvr.getBankingList()) {
+				System.out.println(x.toString());
 			}
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -64,8 +139,6 @@ public class Driver {
 		} 
 	  
 	    
->>>>>>> a3b7982b36705e74f2b8ff636e25440f1b636b1e
-
 		
 		
 	}
