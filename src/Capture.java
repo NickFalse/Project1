@@ -10,4 +10,15 @@ public class Capture extends Board{
 	public Capture(String currentBoardState) {
 		this.currentBoardState = currentBoardState;
 	}
+	
+	//it's game over when you flip the board
+	public String gameOver() {
+		return "flip the board upside down";
+	}
+	
+	//when you secure the flag you win the game
+	public String flagSecured() {
+		return "You've won the game";
+	}
+	
 }

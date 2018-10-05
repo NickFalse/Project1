@@ -5,9 +5,9 @@
  * @version 9/27/2018
  *
  */
-public class Rpg extends Video{
+public class RPG extends Video{
 	private int numOfStrangeCharacters;
-	public Rpg(int numOfStrangeCharacters) {
+	public RPG(int numOfStrangeCharacters) {
 		this.numOfStrangeCharacters = numOfStrangeCharacters;
 	}
 	
