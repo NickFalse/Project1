@@ -41,7 +41,7 @@ public class Driver {
 				String shitshow =scan.nextLine();
 				String[] hek = shitshow.split(", ");
 			      System.out.println(Arrays.toString(hek)); 
-			      System.out.println(Class.forName(hek[1]).getName());
+			      System.out.println(Class.forName(hek[1]));
 			}
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
