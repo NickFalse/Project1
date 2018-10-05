@@ -28,15 +28,31 @@ public class Driver {
 	public Driver() {
 		// TODO Auto-generated constructor stub
 	}
+	public List<String> getTitles(String listName) {
+		List<Game> gameList = new ArrayList<Game>();
+		if(listName.equalsIgnoreCase("Banking")) 	gameList.addAll(bankingList);
+		if(listName.equalsIgnoreCase("Trick")) 	gameList.addAll(trickList);
+		if(listName.equalsIgnoreCase("Patience")) 	gameList.addAll(patienceList);
+		if(listName.equalsIgnoreCase("Tile")) 	gameList.addAll(tileList);
+		if(listName.equalsIgnoreCase("Capture")) 	gameList.addAll(captureList);
+		if(listName.equalsIgnoreCase("Strategy")) 	gameList.addAll(strategyList);
+		if(listName.equalsIgnoreCase("FPS")) 	gameList.addAll(fpsList);
+		if(listName.equalsIgnoreCase("RPG")) 	gameList.addAll(rpgList);
+		if(listName.equalsIgnoreCase("Sport")) 	gameList.addAll(sportList);
+		List<String> titles = new ArrayList<String>();
+		for(Game x:gameList) {
+			titles.add(x.getTitle());
+		}
+		Collections.sort(titles);
+		return titles;
+	}
 	public void addItem(String[] arr){
 		String cl = arr[1];
 		
 		if(cl.equals("Banking")) {
 			Banking obj = new Banking(arr[0],arr[1],Integer.parseInt(arr[2]),Integer.parseInt(arr[3])
 					,arr[4],arr[5],Integer.parseInt(arr[6]));
-			System.out.println("hi");
 			bankingList.add(obj);
-			//System.out.print(bankingList.toString());
 			
 		}
 		if(cl.equals("Trick")) {
@@ -108,31 +124,31 @@ public class Driver {
 	public List<Sport> getSportList() {
 		return sportList;
 	}
-	/**
-	 * @param args
-	 * @throws ClassNotFoundException 
-	 * @throws SecurityException 
-	 * @throws NoSuchMethodException 
-	 * @throws IllegalAccessException 
-	 * @throws InstantiationException 
-	 * @throws InvocationTargetException 
-	 * @throws IllegalArgumentException 
-	 */
+	
+	
 	public static void main(String[] args) {
-		//<title,genre,num of p, game specific, age, time, parrent 1, parrent 2>
 		Driver dvr = new Driver();
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter the file name");
+		String name = input.next();
 		try { 
-			Scanner scan = new Scanner(new File("test.txt"));
+			Scanner scan = new Scanner(new File(name));
+			
 			while (scan.hasNextLine()) {
 				String line =scan.nextLine();
 				String[] arr = line.split(", ");
-				System.out.println(Arrays.toString(arr));
 				dvr.addItem(arr);
 				
+				
+			}
+			System.out.println("Enter the desired genre");
+			String gen = input.next();
+			List<String> titles = dvr.getTitles(gen);
+			for(String x:titles) {
+				System.out.println(x);
 			}
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("File not found");
 		} 
 	  
 	    
