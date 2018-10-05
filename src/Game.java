@@ -7,9 +7,14 @@
  */
 public abstract class Game extends Board{
 
+	//variables 
+	
 	int numOfPlayers, ageRecommend, estimatedTime;
 	String title, genre;
 	boolean Win;
+	
+	
+	//getters and setters
 	
 	/**
 	 * @return the numOfPlayers
