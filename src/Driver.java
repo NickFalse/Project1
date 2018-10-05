@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.ArrayList;
 import java.io.*;
 /**
  * 
@@ -33,6 +33,21 @@ public class Driver {
 		// TODO Auto-generated method stub
 		
 		//File file = new File();
+<<<<<<< HEAD
+<<<<<<< HEAD
+		ArrayList bankingList = new ArrayList();
+		ArrayList trickList = new ArrayList();
+		ArrayList patienceList = new ArrayList();
+		ArrayList tileList = new ArrayList();
+		ArrayList captureList = new ArrayList();
+		ArrayList strategyList = new ArrayList();
+		ArrayList fpsList = new ArrayList();
+		ArrayList rpgList = new ArrayList();
+		ArrayList sportList = new ArrayList();
+
+=======
+=======
+>>>>>>> a3b7982b36705e74f2b8ff636e25440f1b636b1e
 		
 		// pass the path to the file as a parameter 
 		try { 
@@ -49,6 +64,7 @@ public class Driver {
 		} 
 	  
 	    
+>>>>>>> a3b7982b36705e74f2b8ff636e25440f1b636b1e
 
 		
 		
